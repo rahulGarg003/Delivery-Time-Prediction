@@ -1,6 +1,6 @@
 import logging 
 import os
-from config import Config
+from app.config import Config
 
 LOG_FILE=f"{Config.Z_TIMESTAMP}.log"
 logs_path=os.path.join(os.getcwd(),"logs",LOG_FILE)
