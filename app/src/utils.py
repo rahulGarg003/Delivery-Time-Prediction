@@ -36,6 +36,13 @@ def save_object_as_pkl(file_path: str, obj):
     except Exception as e:
         raise CustomException(e, sys)
     
+def load_object_from_pkl(file_path: str):
+    try:
+        with open(file_path, 'rb') as file_obj:
+            return pickle.load(file_obj)
+    except Exception as e:
+        raise CustomException(e, sys)
+    
 def evaluate_model(X_train, y_train, X_test, y_test, models: dict) -> dict:
     try:
         report = {}
